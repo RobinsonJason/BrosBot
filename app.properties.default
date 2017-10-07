@@ -15,7 +15,7 @@ clientid=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 greeting=VoHiYo
 
 #   DB Connection Details   
-dbstring=jdbc:postgresql://localhost/brobot
+dbstring=jdbc:postgresql://localhost/brosbot
 dbuser=postgres
 dbpass=postgres
 
