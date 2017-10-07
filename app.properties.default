@@ -1,0 +1,89 @@
+#      BroBot Settings      
+# loglevel is how detailed your logs will be.  Useful
+# for diagnosing an issue with the app.
+
+# Twitch Channel Details 
+streamername=your_twitch_name
+channel=#your_twitch_channel
+url=irc.chat.twitch.tv
+port=6667
+
+# Bot Connection Details
+botname=bot_twitch_name
+oauth=oauth:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+clientid=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+# if greeting is "none" then no greeting will be sent when the bot connects
+greeting=VoHiYo
+
+#   DB Connection Details   
+dbstring=jdbc:postgresql://localhost/brobot
+dbuser=postgres
+dbpass=postgres
+
+# The following settings are for permissions.  There are
+# some commands that are "baked in" in the app.  The
+# following settings give you control over who can do what
+# actions.  It is assumed that if you give permissions to
+# "all" that mods and the streamer have permission too.
+# Hence, this is a cascading permission architecture.  If
+# you give permissions to the "all" group, mods and streamer 
+# are included.  If you give permissions to the "mod" group,
+# the streamer is included.  Finally, if you give permissions
+# to the "streamer" group, only the streamer has permission
+# for that item.
+# Possible values: all, mod, streamer
+
+# Command Permissions
+commandadd=mod
+commanddisable=mod
+commanddelete=streamer
+commandlistandsearch=all
+# Note: There is no "commandrun" control, as that is db-driven
+
+# Message Permissions
+# These settings are reserved for future use, in case message
+# level responses later become a feature.
+messageadd=streamer
+messagedisable=streamer
+messagedelete=streamer
+messagelistandsearch=mod
+
+# Mode Permissions
+modeadd=streamer
+modedisable=streamer
+modedelete=streamer
+modelistandsearch=mod
+modechange=mod
+
+# Moderation Permissions
+userban=mod
+userunban=mod
+
+# Other Permissions
+# basic refers to commands like uptime
+basic=all
+speedrunsearch=all
+modifyuptime=streamer
+
+# Other Settings
+sendmessageonbanandunban=true
+
+# when trackmodeuptime is set to true, the !uptime command will
+# return total uptime, as well as uptime for the current mode.
+# If you do not switch modes often, it might be better setting this
+# to false.
+trackmodeuptime=true
+
+# if you are tracking mode uptime, you can also control the
+# threshhold for when "total uptime" and "mode uptime" should be
+# considered one and the same.  if setuptime is set to '5', then
+# as long as you 'setmode' within the first 5 minutes of going online,
+# the modeuptime will be set to your 'totaluptime'.  if you set this
+# to '0', both will be tracked separately at all times.  it is not
+# recommended to set this number higher than the length of time, in
+# minutes, than it takes you to 'get going' with your stream.
+setuptime=5
+botcanrunspeedruncommands=true
+
+# Possible values: debug, error, info
+loglevel=debug
