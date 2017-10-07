@@ -1,6 +1,5 @@
 #      BroBot Settings      
-# loglevel is how detailed your logs will be.  Useful
-# for diagnosing an issue with the app.
+
 
 # Twitch Channel Details 
 streamername=your_twitch_name
@@ -85,5 +84,7 @@ trackmodeuptime=true
 setuptime=5
 botcanrunspeedruncommands=true
 
+# loglevel is how detailed your logs will be.  Useful
+# for diagnosing an issue with the app.
 # Possible values: debug, error, info
 loglevel=debug
